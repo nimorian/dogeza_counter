@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @doge.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @doge.description %>
+</p>
+
+<p>
+  <strong>Count:</strong>
+  <%= @doge.count %>
+</p>
+
+<%= link_to 'Edit', edit_doge_path(@doge) %> |
+<%= link_to 'Back', doges_path %>
+
+<br><br>
+
+<%= link_to '土下座する', play_doge_path(@doge) %>

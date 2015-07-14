@@ -1,0 +1,25 @@
+<table>
+  <thead>
+    <tr>
+      <th>土下座タイプ</th>
+      <th>やらかしたの？</th>
+      <th colspan="3">いじるの？</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @doges.each do |doge| %>
+      <tr>
+        <td><%= doge.title %></td>
+        <td><%= link_to 'やらかした', play_doge_path(doge) %></td>
+        <td><%= link_to 'どんな土下座か見るよ', doge %>|</td>
+        <td><%= link_to '編集するよ', edit_doge_path(doge) %>|</td>
+        <td><%= link_to 'この土下座を消すよ', doge, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '新しい土下座を追加する', new_doge_path %>
